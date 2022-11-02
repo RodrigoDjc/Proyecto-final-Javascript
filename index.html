@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <title>PROYECTO FINAL</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row g-3">
+      <nav class="navbar navbar-expand-lg  navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span></button>
+        <div  class="collapse navbar-collapse cabecera" id="navbarNavAltMarkup">
+          
+          <div >
+            <button class="btn btn-light" id="botonLightMode">Light</button>
+            <button class="btn btn-dark" id="botonDarkMode">Dark</button>
+            <a href="#listaCarrito"> <img src="data:image/png;base64,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" alt="">
+</a>
+          </div>
+        </div>
+    </div>
+  </div>
+  </nav>
+  <!--Oferta-->
+  <div class="container">
+    <div class="card">
+      <div class="card-body" style="text-align: center">
+       
+         <!--Aplicando compras de productos -->
+      
+        <!--<div class="car">
+          <button id="compra">COMPRAR!!!!</button>
+          <button id="nocomprar">ELIMINAR COMPRA!!!</button>
+        </div>
+        <div>
+          <h4 class="saberCompra">contador:<span id ="resultado">0</span></h4>
+        </div>-->
+
+        <!--Aplicando libreria al boton -->
+        <input id="btnLibreria" type="submit" value="Toque para la frase del dia">
+        <h5 class="card-title">NO TE PIERDAS ESTA OFERTA!!</h5>
+        <p class="card-text"> 6 Botellas de Fernet Branca.</p>
+        <p class="card-text"> $2400</p>
+        <p class="card-text"><small class="text-muted">Buscar otras similares</small></p> <input type="text"
+          id="input1">
+        <button type="buttonindex" id="boton1" href="">Buscar</button>
+      </div>
+      <div class="fernets">
+          <img src="D_NQ_NP_662039-MLA42191352048_062020-O.jpeg" width="ms-auto" height="300px" class="card-img-bottom"
+        alt="card-img-bottom">
+      </div>
+      <button type="buttonindex" id="boton1" href="" class="btn btn-primary">Comprar</button>
+    </div>
+  </div>
+  <!--Cajas-->
+  <div id="Caja">
+    <h1>Nuevos ingresos</h1>
+  </div>
+  <div id="info">
+
+  </div>
+  <!--Formulario-->
+  <main>
+    <section class="bg-light p-5 text-center text-sm-start">
+      <div class="container">
+        <form id="idForm">
+          <h2 style="text-align: center">Formulario</h2>
+          <div class="mb-3">
+            <label for="exampleInputUser1" class="form-label">Username</label>
+            <input type="text" class="form-control" id="exampleInputUser1" aria-describedby="userHelp">
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+          </div>
+          <button type="submit" class="btn btn-primary">Crear usuario</button>
+          <div>
+            
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+  <!--Tablas-->
+  <div id="tabla">
+    <table class="table container my-4">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Stock</th>
+          </tr>
+        </thead>
+        <tbody>
+        
+    
+        </tbody>
+      </table>
+</div>
+<h2>LISTA DE COMPRAS</h2>
+<div id="listaCarrito">
+  <table class="table container my-4">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">imagen</th>
+        <th scope="col">Name</th>
+        <th scope="col">Price</th>
+        <th scope="col">Cantidad</th>
+        <th scope="col">Total por Producto</th>
+      </tr>
+    </thead>
+    <tbody id="tBody">
+    
+
+    </tbody>
+    <tbody>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>Precio total =</td>
+      <td id="precioFinal">$ 0</td>
+    </tbody>
+  </table>
+
+
+</div>
+
+
+
+  <!--Bootstrap-->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+  <!--Javascript-->
+  <script type="module" src="/script.js"></script>
+  
+</body>
+</html>
